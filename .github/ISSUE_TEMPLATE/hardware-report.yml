@@ -1,0 +1,79 @@
+name: Hardware report
+description: Report a hardware-enablement problem observed on the Lenovo Yoga Book
+title: "[hardware] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for documenting a hardware result. This project distinguishes
+        automated evidence from physical acceptance, so please be precise about
+        where your result came from. Do not include credentials, serial numbers,
+        private firmware, or other sensitive data.
+  - type: dropdown
+    id: model
+    attributes:
+      label: Yoga Book model
+      description: The exact device model (see the label on the device or `sudo dmidecode -s system-product`).
+      options:
+        - YB1-X91L (primary target)
+        - YB1-X91F
+        - Other or unknown
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version
+      description: Device firmware/BIOS version if known.
+      placeholder: e.g. YB1-X90F_USR_S100043_1709020000_WW08_BP_ROW
+  - type: input
+    id: system
+    attributes:
+      label: Distribution and kernel
+      description: Output of `lsb_release -ds` and `uname -r`.
+      placeholder: e.g. Ubuntu 24.04.1, 6.8.0-yogabook
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Evidence source
+      description: Where was this result observed?
+      options:
+        - Physical tablet
+        - Virtual machine
+        - Automation / CI
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected versus observed behavior
+      description: What did you expect to happen, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Numbered steps that reproduce the problem.
+      placeholder: |
+        1. Boot the tablet with ...
+        2. Run ...
+        3. Observe ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or Yoga Book Validator report
+      description: |
+        Paste the relevant output, or attach a Yoga Book Validator report.
+        Trim logs to the relevant section and confirm they contain no
+        credentials, serial numbers, or private firmware.
+      render: shell
+  - type: checkboxes
+    id: sensitive-data
+    attributes:
+      label: Sensitive data check
+      options:
+        - label: This report contains no credentials, serial numbers, or private firmware.
+          required: true

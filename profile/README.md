@@ -23,10 +23,10 @@ specialized audio path, and tightly integrated sensors in one unusual platform.
 Supporting it well takes more than a kernel patch or a customized image.
 
 We coordinate the device-specific layers required for a useful Linux system:
-kernel enablement, input and haptics, audio, sensors, cameras, installation, and
-system-level validation. The **Lenovo Yoga Book YB1-X91L** is our primary
-integration and acceptance target; individual projects document any additional
-supported models.
+kernel enablement, input and haptics, audio, sensors, cameras, location,
+installation, and system-level validation. The **Lenovo Yoga Book YB1-X91L** is
+our primary integration and acceptance target; individual projects document any
+additional supported models.
 
 > [!IMPORTANT]
 > This is active, device-specific development. A successful build or automated
@@ -70,6 +70,7 @@ status documentation. Back up important data and keep a known-good boot option.
 | **Validation** | [Yoga Book Validator](https://github.com/Yoga-Book/Yoga-Book-Validator) | CLI and graphical system and hardware checks |
 | **Input** | [Halo Keyboard](https://github.com/Yoga-Book/Halo-Keyboard) | Halo keyboard, touchpad, haptics, and input quirks |
 | **Sensors** | [Yoga Book Sensors](https://github.com/Yoga-Book/Yoga-Book-Sensors) | Orientation, proximity, classification, and thermal policy |
+| **Location** | [Yoga Book GNSS](https://github.com/Yoga-Book/Yoga-Book-GNSS) | BCM4752 GNSS receiver integration and gpsd bridge |
 | **Camera** | [Yoga Book Camera](https://github.com/Yoga-Book/Yoga-Book-Camera) | Experimental front and rear camera userspace integration |
 | **Audio** | [Yoga Book ALSA UCM Config](https://github.com/Yoga-Book/Yoga-Book-ALSA-UCM-Config) | ALSA Use Case Manager configuration |
 | **Firmware** | [Yoga Book Sound Open Firmware](https://github.com/Yoga-Book/Yoga-Book-Sound-Open-Firmware) | Yoga Book Sound Open Firmware integration |
@@ -131,7 +132,7 @@ sensitive data.
   ·
   <a href="https://github.com/search?q=org%3AYoga-Book+is%3Aissue+is%3Aopen&amp;type=issues"><strong>Open issues</strong></a>
   ·
-  <a href="https://github.com/Yoga-Book/Yoga-Book-Validator/issues"><strong>System validation</strong></a>
+  <a href="https://github.com/Yoga-Book/Yoga-Book-Validator"><strong>System validation</strong></a>
 </p>
 
 ---

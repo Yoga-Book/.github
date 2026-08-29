@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Yoga-Book organization profile
+    url: https://github.com/Yoga-Book
+    about: Find the repository that owns the component you are reporting on.
+  - name: Yoga Book Validator
+    url: https://github.com/Yoga-Book/Yoga-Book-Validator/issues
+    about: For system-wide behavior or help collecting evidence.

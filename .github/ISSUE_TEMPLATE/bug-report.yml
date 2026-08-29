@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a defect in this component
+title: "[bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a defect. If the problem is about hardware
+        behavior on the tablet, use the hardware report template instead. Do
+        not include credentials, serial numbers, private firmware, or other
+        sensitive data.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected versus observed behavior
+      description: What did you expect to happen, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Numbered steps that reproduce the problem.
+      placeholder: |
+        1. Install / configure ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Distribution, kernel, package or branch version, and Yoga Book model if relevant.
+      placeholder: e.g. Ubuntu 24.04.1, 6.8.0-yogabook, YB1-X91L
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Evidence source
+      description: Where was this result observed?
+      options:
+        - Physical tablet
+        - Virtual machine
+        - Automation / CI
+        - Not applicable
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or other output
+      description: Paste the relevant output. Trim it to the relevant section.
+      render: shell
+  - type: checkboxes
+    id: sensitive-data
+    attributes:
+      label: Sensitive data check
+      options:
+        - label: This report contains no credentials, serial numbers, or private firmware.
+          required: true
