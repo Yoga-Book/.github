@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="t">
+  <title id="t">Safe by default</title>
+  <circle cx="24" cy="24" r="16" stroke="#6fd6ff" stroke-width="3"/>
+  <circle cx="24" cy="24" r="7" stroke="#97a5ff" stroke-width="3"/>
+  <path d="M24 8v9M24 31v9M8 24h9M31 24h9" stroke="#97a5ff" stroke-width="3"/>
+</svg>

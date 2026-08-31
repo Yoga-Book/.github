@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="t">
+  <title id="t">Location</title>
+  <path d="M24 42c-8.4-9.3-13-15-13-21a13 13 0 1 1 26 0c0 6-4.6 11.7-13 21z" stroke="#6fd6ff" stroke-width="3"/>
+  <circle cx="24" cy="20.5" r="4.5" stroke="#97a5ff" stroke-width="3"/>
+</svg>

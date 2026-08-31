@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="t">
+  <title id="t">Audio</title>
+  <path d="M10 20v8M38 20v8" stroke="#97a5ff" stroke-width="3"/>
+  <path d="M17 14v20M31 14v20" stroke="#6fd6ff" stroke-width="3"/>
+  <path d="M24 8v32" stroke="#6fd6ff" stroke-width="3"/>
+</svg>

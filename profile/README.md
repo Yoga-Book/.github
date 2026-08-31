@@ -38,18 +38,21 @@ additional supported models.
 <table>
   <tr>
     <td width="33%" valign="top">
+      <img src="./assets/icons/installation.svg" alt="" width="30" height="30"><br>
       <sub><strong>01 · INSTALL</strong></sub>
       <h3>Prepare an Ubuntu image</h3>
       <p>Use the documented ISO-remastering workflow as the system-integration entry point.</p>
       <p><a href="https://github.com/Yoga-Book/Ubuntu-Autoinstall"><strong>Ubuntu Autoinstall →</strong></a></p>
     </td>
     <td width="33%" valign="top">
+      <img src="./assets/icons/platform.svg" alt="" width="30" height="30"><br>
       <sub><strong>02 · DEVELOP</strong></sub>
       <h3>Follow platform work</h3>
       <p>Explore the kernel branches and patches that provide the hardware-enablement foundation.</p>
       <p><a href="https://github.com/Yoga-Book/Yoga-Book-Linux-Kernel"><strong>Linux Kernel →</strong></a></p>
     </td>
     <td width="33%" valign="top">
+      <img src="./assets/icons/validation.svg" alt="" width="30" height="30"><br>
       <sub><strong>03 · VERIFY</strong></sub>
       <h3>Test the complete system</h3>
       <p>Audit an installation and record automated results separately from physical checks.</p>
@@ -63,17 +66,68 @@ status documentation. Back up important data and keep a known-good boot option.
 
 ## Project map
 
-| Area | Project | What it owns |
-| --- | --- | --- |
-| **Platform** | [Yoga Book Linux Kernel](https://github.com/Yoga-Book/Yoga-Book-Linux-Kernel) | Kernel source and Yoga Book hardware enablement |
-| **Installation** | [Ubuntu Autoinstall](https://github.com/Yoga-Book/Ubuntu-Autoinstall) | Installer images and package integration |
-| **Validation** | [Yoga Book Validator](https://github.com/Yoga-Book/Yoga-Book-Validator) | CLI and graphical system and hardware checks |
-| **Input** | [Halo Keyboard](https://github.com/Yoga-Book/Halo-Keyboard) | Halo keyboard, touchpad, haptics, and input quirks |
-| **Sensors** | [Yoga Book Sensors](https://github.com/Yoga-Book/Yoga-Book-Sensors) | Orientation, proximity, classification, and thermal policy |
-| **Location** | [Yoga Book GNSS](https://github.com/Yoga-Book/Yoga-Book-GNSS) | BCM4752 GNSS receiver integration and gpsd bridge |
-| **Camera** | [Yoga Book Camera](https://github.com/Yoga-Book/Yoga-Book-Camera) | Experimental front and rear camera userspace integration |
-| **Audio** | [Yoga Book ALSA UCM Config](https://github.com/Yoga-Book/Yoga-Book-ALSA-UCM-Config) | ALSA Use Case Manager configuration |
-| **Firmware** | [Yoga Book Sound Open Firmware](https://github.com/Yoga-Book/Yoga-Book-Sound-Open-Firmware) | Yoga Book Sound Open Firmware integration |
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/platform.svg" alt="" width="30" height="30"><br>
+      <sub><strong>PLATFORM</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Yoga-Book-Linux-Kernel">Yoga Book Linux Kernel</a></h3>
+      <p>Kernel source and Yoga Book hardware enablement.</p>
+    </td>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/installation.svg" alt="" width="30" height="30"><br>
+      <sub><strong>INSTALLATION</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Ubuntu-Autoinstall">Ubuntu Autoinstall</a></h3>
+      <p>Installer images and package integration.</p>
+    </td>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/validation.svg" alt="" width="30" height="30"><br>
+      <sub><strong>VALIDATION</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Yoga-Book-Validator">Yoga Book Validator</a></h3>
+      <p>CLI and graphical system and hardware checks.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/input.svg" alt="" width="30" height="30"><br>
+      <sub><strong>INPUT</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Halo-Keyboard">Halo Keyboard</a></h3>
+      <p>Halo keyboard, touchpad, haptics, and input quirks.</p>
+    </td>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/sensors.svg" alt="" width="30" height="30"><br>
+      <sub><strong>SENSORS</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Yoga-Book-Sensors">Yoga Book Sensors</a></h3>
+      <p>Orientation, proximity, classification, and thermal policy.</p>
+    </td>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/location.svg" alt="" width="30" height="30"><br>
+      <sub><strong>LOCATION</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Yoga-Book-GNSS">Yoga Book GNSS</a></h3>
+      <p>BCM4752 GNSS receiver integration and gpsd bridge.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/camera.svg" alt="" width="30" height="30"><br>
+      <sub><strong>CAMERA</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Yoga-Book-Camera">Yoga Book Camera</a></h3>
+      <p>Experimental front and rear camera userspace integration.</p>
+    </td>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/audio.svg" alt="" width="30" height="30"><br>
+      <sub><strong>AUDIO</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Yoga-Book-ALSA-UCM-Config">Yoga Book ALSA UCM Config</a></h3>
+      <p>ALSA Use Case Manager configuration.</p>
+    </td>
+    <td width="33%" valign="top">
+      <img src="./assets/icons/firmware.svg" alt="" width="30" height="30"><br>
+      <sub><strong>FIRMWARE</strong></sub>
+      <h3><a href="https://github.com/Yoga-Book/Yoga-Book-Sound-Open-Firmware">Yoga Book Sound Open Firmware</a></h3>
+      <p>Yoga Book Sound Open Firmware integration.</p>
+    </td>
+  </tr>
+</table>
 
 Read-only upstream desktop mirrors and archived experiments remain in the
 [complete repository list](https://github.com/orgs/Yoga-Book/repositories), but
@@ -84,16 +138,19 @@ they are not recommended starting points for users.
 <table>
   <tr>
     <td width="33%" valign="top">
+      <img src="./assets/icons/boundaries.svg" alt="" width="30" height="30"><br>
       <sub><strong>CLEAR BOUNDARIES</strong></sub>
       <h3>Focused ownership</h3>
       <p>Kernel, userspace, packaging, and validation concerns stay in explicitly scoped repositories.</p>
     </td>
     <td width="33%" valign="top">
+      <img src="./assets/icons/evidence.svg" alt="" width="30" height="30"><br>
       <sub><strong>VERIFIABLE RESULTS</strong></sub>
       <h3>Evidence first</h3>
       <p>Build results, VM checks, and physical-device acceptance are reported as different kinds of evidence.</p>
     </td>
     <td width="33%" valign="top">
+      <img src="./assets/icons/safety.svg" alt="" width="30" height="30"><br>
       <sub><strong>RECOVERABLE WORKFLOWS</strong></sub>
       <h3>Safe by default</h3>
       <p>Installation and diagnostic workflows favor explicit targets, recovery paths, and reproducible results.</p>

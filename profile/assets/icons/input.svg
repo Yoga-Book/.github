@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="t">
+  <title id="t">Input</title>
+  <rect x="6" y="14" width="36" height="20" rx="5" stroke="#6fd6ff" stroke-width="3"/>
+  <g fill="#97a5ff" stroke="none">
+    <circle cx="15" cy="21" r="1.7"/><circle cx="22" cy="21" r="1.7"/><circle cx="29" cy="21" r="1.7"/><circle cx="36" cy="21" r="1.7"/>
+  </g>
+  <path d="M17 27.5h14" stroke="#97a5ff" stroke-width="3"/>
+</svg>

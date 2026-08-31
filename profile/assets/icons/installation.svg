@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="t">
+  <title id="t">Installation</title>
+  <path d="M24 8v18M16 19l8 8 8-8" stroke="#6fd6ff" stroke-width="3"/>
+  <path d="M10 30v6a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4v-6" stroke="#97a5ff" stroke-width="3"/>
+</svg>

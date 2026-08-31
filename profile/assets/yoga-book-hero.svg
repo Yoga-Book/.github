@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title description">
   <title id="title">Yoga Book Linux</title>
-  <desc id="description">A dark blue banner with the Yoga Book Linux name and a line illustration of a convertible tablet.</desc>
+  <desc id="description">A dark blue banner with the Yoga Book Linux name and a line illustration of the Yoga Book lying open like a book, its screen beside the glowing halo keyboard.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#080d1a"/>
@@ -11,22 +11,48 @@
       <stop offset="0" stop-color="#52d3ff"/>
       <stop offset="1" stop-color="#8b9dff"/>
     </linearGradient>
+    <linearGradient id="wallpaper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123252"/>
+      <stop offset="1" stop-color="#1a5275"/>
+    </linearGradient>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
       <stop offset="0" stop-color="#42c8ff" stop-opacity="0.22"/>
       <stop offset="1" stop-color="#42c8ff" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#52d3ff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#52d3ff" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M32 0H0V32" fill="none" stroke="#b8d7ff" stroke-opacity="0.055"/>
     </pattern>
-    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
-      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000814" flood-opacity="0.45"/>
+    <clipPath id="screenClip">
+      <rect x="12" y="12" width="226" height="186" rx="8"/>
+    </clipPath>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000814" flood-opacity="0.5"/>
     </filter>
   </defs>
 
   <rect width="1280" height="360" rx="24" fill="url(#background)"/>
   <rect width="1280" height="360" rx="24" fill="url(#grid)"/>
-  <ellipse cx="1010" cy="175" rx="330" ry="265" fill="url(#glow)"/>
-  <path d="M0 310C260 252 443 348 681 305s394-61 599-21v76H0z" fill="#07101f" fill-opacity="0.55"/>
+  <g fill="#cfe7ff">
+    <circle cx="620" cy="52" r="1.4" fill-opacity="0.22"/>
+    <circle cx="700" cy="120" r="1.1" fill-opacity="0.16"/>
+    <circle cx="760" cy="40" r="1.6" fill-opacity="0.28"/>
+    <circle cx="880" cy="30" r="1.2" fill-opacity="0.2"/>
+    <circle cx="1050" cy="44" r="1.5" fill-opacity="0.26"/>
+    <circle cx="1160" cy="86" r="1.2" fill-opacity="0.18"/>
+    <circle cx="1226" cy="40" r="1.4" fill-opacity="0.24"/>
+    <circle cx="1240" cy="170" r="1.2" fill-opacity="0.16"/>
+    <circle cx="640" cy="210" r="1.2" fill-opacity="0.14"/>
+    <circle cx="560" cy="90" r="1.1" fill-opacity="0.14"/>
+  </g>
+  <circle cx="975" cy="180" r="205" fill="none" stroke="#7fb7ff" stroke-opacity="0.08" stroke-width="1.5"/>
+  <circle cx="975" cy="180" r="252" fill="none" stroke="#7fb7ff" stroke-opacity="0.05" stroke-width="1.5"/>
+  <ellipse cx="980" cy="180" rx="340" ry="250" fill="url(#glow)"/>
+  <path d="M0 300C240 246 430 342 668 300s402-58 612-18v78H0z" fill="#0a1526" fill-opacity="0.35"/>
+  <path d="M0 312C260 254 443 350 681 307s394-61 599-21v74H0z" fill="#07101f" fill-opacity="0.55"/>
 
   <g transform="translate(82 81)">
     <rect width="54" height="54" rx="14" fill="url(#accent)"/>
@@ -36,7 +62,7 @@
 
   <g fill="#f7fbff" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
     <text x="82" y="190" font-size="58" font-weight="700" letter-spacing="-1.5">Yoga Book Linux</text>
-    <text x="85" y="232" fill="#b9c8dd" font-size="21" font-weight="400">Hardware enablement for the original Intel-based Yoga Book</text>
+    <text x="85" y="232" fill="#b9c8dd" font-size="21" font-weight="400" letter-spacing="0.2">Hardware enablement for the original Intel-based Yoga Book</text>
   </g>
 
   <g transform="translate(84 270)" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="0.6">
@@ -48,18 +74,35 @@
     <text x="303" y="21" fill="#d6dcff" text-anchor="middle">OPEN SOURCE</text>
   </g>
 
-  <g transform="translate(795 69) rotate(-2 185 112)" filter="url(#shadow)">
-    <path d="M74 0h268a18 18 0 0 1 18 18v170H56V18A18 18 0 0 1 74 0z" fill="#0b1325" stroke="url(#accent)" stroke-width="3"/>
-    <rect x="72" y="16" width="272" height="154" rx="8" fill="#152844" stroke="#87ddff" stroke-opacity="0.28"/>
-    <path d="M92 141c54-63 100-33 141-72 34-33 69-33 96-18v103H92z" fill="#1a5275" fill-opacity="0.44"/>
-    <circle cx="117" cy="48" r="10" fill="#52d3ff" fill-opacity="0.75"/>
-    <path d="M50 187h320l62 87c5 7 0 17-9 17H-3c-9 0-14-10-9-17z" fill="#0a1222" stroke="#8b9dff" stroke-opacity="0.65" stroke-width="2.5"/>
-    <path d="M24 259h368" stroke="#5bd7ff" stroke-opacity="0.55" stroke-width="2"/>
-    <g fill="#74dfff" fill-opacity="0.38">
-      <circle cx="46" cy="219" r="2.4"/><circle cx="64" cy="219" r="2.4"/><circle cx="82" cy="219" r="2.4"/><circle cx="100" cy="219" r="2.4"/><circle cx="118" cy="219" r="2.4"/><circle cx="136" cy="219" r="2.4"/><circle cx="154" cy="219" r="2.4"/><circle cx="172" cy="219" r="2.4"/><circle cx="190" cy="219" r="2.4"/><circle cx="208" cy="219" r="2.4"/><circle cx="226" cy="219" r="2.4"/><circle cx="244" cy="219" r="2.4"/><circle cx="262" cy="219" r="2.4"/><circle cx="280" cy="219" r="2.4"/><circle cx="298" cy="219" r="2.4"/><circle cx="316" cy="219" r="2.4"/><circle cx="334" cy="219" r="2.4"/><circle cx="352" cy="219" r="2.4"/>
-      <circle cx="55" cy="235" r="2.4"/><circle cx="73" cy="235" r="2.4"/><circle cx="91" cy="235" r="2.4"/><circle cx="109" cy="235" r="2.4"/><circle cx="127" cy="235" r="2.4"/><circle cx="145" cy="235" r="2.4"/><circle cx="163" cy="235" r="2.4"/><circle cx="181" cy="235" r="2.4"/><circle cx="199" cy="235" r="2.4"/><circle cx="217" cy="235" r="2.4"/><circle cx="235" cy="235" r="2.4"/><circle cx="253" cy="235" r="2.4"/><circle cx="271" cy="235" r="2.4"/><circle cx="289" cy="235" r="2.4"/><circle cx="307" cy="235" r="2.4"/><circle cx="325" cy="235" r="2.4"/><circle cx="343" cy="235" r="2.4"/>
+  <g transform="translate(706 73) rotate(-2 264 107) scale(1.02)" filter="url(#shadow)">
+    <rect x="0" y="0" width="250" height="210" rx="16" fill="#0b1325" stroke="url(#accent)" stroke-width="3"/>
+    <rect x="12" y="12" width="226" height="186" rx="8" fill="url(#wallpaper)" stroke="#87ddff" stroke-opacity="0.28"/>
+    <g clip-path="url(#screenClip)">
+      <circle cx="56" cy="60" r="11" fill="#52d3ff" fill-opacity="0.8"/>
+      <path d="M12 172C58 112 96 144 128 108c26-29 62-27 110 8v82H12z" fill="#1a5275" fill-opacity="0.5"/>
     </g>
-    <path d="M167 271h90" stroke="#9caeff" stroke-opacity="0.72" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#0a1222" stroke="url(#accent)" stroke-opacity="0.6" stroke-width="1.5">
+      <rect x="252" y="8" width="14" height="26" rx="7"/>
+      <rect x="252" y="41" width="14" height="26" rx="7"/>
+      <rect x="252" y="74" width="14" height="26" rx="7"/>
+      <rect x="252" y="107" width="14" height="26" rx="7"/>
+      <rect x="252" y="140" width="14" height="26" rx="7"/>
+      <rect x="252" y="173" width="14" height="26" rx="7"/>
+    </g>
+    <rect x="268" y="0" width="250" height="210" rx="16" fill="#0b1325" stroke="url(#accent)" stroke-width="3"/>
+    <ellipse cx="393" cy="76" rx="120" ry="72" fill="url(#halo)"/>
+    <g fill="#74dfff" fill-opacity="0.45">
+      <circle cx="296" cy="34" r="2.6"/><circle cx="324" cy="34" r="2.6"/><circle cx="352" cy="34" r="2.6"/><circle cx="380" cy="34" r="2.6"/><circle cx="408" cy="34" r="2.6"/><circle cx="436" cy="34" r="2.6"/><circle cx="464" cy="34" r="2.6"/><circle cx="492" cy="34" r="2.6"/>
+      <circle cx="296" cy="62" r="2.6"/><circle cx="324" cy="62" r="2.6"/><circle cx="352" cy="62" r="2.6"/><circle cx="380" cy="62" r="2.6"/><circle cx="408" cy="62" r="2.6"/><circle cx="436" cy="62" r="2.6"/><circle cx="464" cy="62" r="2.6"/><circle cx="492" cy="62" r="2.6"/>
+      <circle cx="296" cy="90" r="2.6"/><circle cx="324" cy="90" r="2.6"/><circle cx="352" cy="90" r="2.6"/><circle cx="380" cy="90" r="2.6"/><circle cx="408" cy="90" r="2.6"/><circle cx="436" cy="90" r="2.6"/><circle cx="464" cy="90" r="2.6"/><circle cx="492" cy="90" r="2.6"/>
+      <circle cx="296" cy="118" r="2.6"/><circle cx="324" cy="118" r="2.6"/><circle cx="352" cy="118" r="2.6"/><circle cx="380" cy="118" r="2.6"/><circle cx="408" cy="118" r="2.6"/><circle cx="436" cy="118" r="2.6"/><circle cx="464" cy="118" r="2.6"/><circle cx="492" cy="118" r="2.6"/>
+    </g>
+    <rect x="353" y="142" width="80" height="50" rx="10" fill="none" stroke="#9caeff" stroke-opacity="0.6" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(1042 318) rotate(-6)">
+    <rect width="148" height="8" rx="4" fill="#0a1222" stroke="#8b9dff" stroke-opacity="0.5" stroke-width="1.5"/>
+    <path d="M148 0l16 4-16 4z" fill="#52d3ff" fill-opacity="0.8"/>
   </g>
 
   <rect x="1" y="1" width="1278" height="358" rx="23" fill="none" stroke="#b6ddff" stroke-opacity="0.13" stroke-width="2"/>

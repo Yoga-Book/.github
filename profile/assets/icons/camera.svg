@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="t">
+  <title id="t">Camera</title>
+  <path d="M17 15l3.5-5h7L31 15" stroke="#6fd6ff" stroke-width="3"/>
+  <rect x="6" y="15" width="36" height="25" rx="5" stroke="#6fd6ff" stroke-width="3"/>
+  <circle cx="24" cy="27" r="7.5" stroke="#97a5ff" stroke-width="3"/>
+  <circle cx="36" cy="21" r="1.8" fill="#97a5ff" stroke="none"/>
+</svg>
