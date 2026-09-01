@@ -11,9 +11,16 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   project-map:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
@@ -22,3 +29,35 @@ jobs:
         run: bash scripts/check-project-map.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Open an issue if the scheduled run failed
+        if: failure() && github.event_name == 'schedule'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const title = "[ci] Scheduled project map check failed";
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = issues.find((issue) => issue.title === title);
+            if (existing) {
+              console.log(`Already tracked in #${existing.number}.`);
+            } else {
+              const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body: [
+                  "The scheduled project map check failed.",
+                  "",
+                  `Run: ${run}`,
+                  "",
+                  "Review the workflow output, then update the project map or the repository settings.",
+                ].join("\n"),
+              });
+              console.log(`Opened #${created.data.number}.`);
+            }

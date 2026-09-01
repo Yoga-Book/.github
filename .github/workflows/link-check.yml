@@ -11,14 +11,30 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   links:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
 
-      - name: Check links in profile documentation
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.ref }}-${{ hashFiles('**/*.md') }}
+          restore-keys: |
+            cache-lychee-${{ github.ref }}-
+            cache-lychee-
+
+      - name: Check links in documentation
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -26,8 +42,42 @@ jobs:
             --no-progress
             --max-retries 3
             --retry-wait-time 10
-            README.md
-            profile/README.md
+            --cache
+            --max-cache-age 1d
+            *.md
+            profile/**/*.md
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Open an issue if the scheduled run failed
+        if: failure() && github.event_name == 'schedule'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const title = "[ci] Scheduled link check failed";
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = issues.find((issue) => issue.title === title);
+            if (existing) {
+              console.log(`Already tracked in #${existing.number}.`);
+            } else {
+              const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body: [
+                  "The scheduled link check failed.",
+                  "",
+                  `Run: ${run}`,
+                  "",
+                  "Review the workflow output, then fix the broken links or update the documentation.",
+                ].join("\n"),
+              });
+              console.log(`Opened #${created.data.number}.`);
+            }

@@ -38,18 +38,26 @@ Notes:
 - Licenses cannot be organization-wide defaults. The
   [`LICENSE`](LICENSE) here (CC-BY-4.0) covers only this repository's
   documentation and artwork; component repositories carry their own licenses.
+- Dependabot configuration is per repository. The
+  [`.github/dependabot.yml`](.github/dependabot.yml) here covers only this
+  repository; component repositories need their own.
 
 ## Checks
 
 Workflows in [`.github/workflows/`](.github/workflows/) protect this
 repository:
 
-- **Link check** — validates every URL in the profile and this README with
+- **Link check** — validates every URL in the Markdown documentation with
   [lychee](https://github.com/lycheeverse/lychee) on push, on pull requests,
-  and weekly.
+  and weekly, and opens an issue if a scheduled run fails.
 - **Project map sync** — queries the organization's repositories and fails if
-  an active, original repository is missing from the profile's project map
+  an active, original repository is missing from the profile's project map or
+  the contribution guide, or if a link points at a stale repository
   ([`scripts/check-project-map.sh`](scripts/check-project-map.sh)).
+- **Lint** — validates workflows with
+  [actionlint](https://github.com/rhysd/actionlint), shell scripts with
+  [ShellCheck](https://www.shellcheck.net/), and Markdown with
+  [markdownlint](https://github.com/DavidAnson/markdownlint).
 
 ## Contributing
 

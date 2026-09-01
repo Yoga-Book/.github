@@ -45,6 +45,8 @@ body:
         - Virtual machine
         - Automation / CI
         - Not applicable
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
